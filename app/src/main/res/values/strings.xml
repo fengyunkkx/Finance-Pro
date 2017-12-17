@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">家庭理财系统</string>
+    <string name="main">家庭理财系统</string>
+    <string name="projxlogin">登录界面</string>
+    <string name="register">注册界面</string>
+    <string name="projxaddoutaccount">新增支出</string>
+    <string name="projxaddinaccount">新增收入</string>
+    <string name="projxaccountflag">新增便签</string>
+    <string name="projxoutaccountinfo">我的支出</string>
+    <string name="projxinaccountinfo">我的收入</string>
+    <string name="projxshowinfo">数据管理</string>
+    <string name="projxsysset">系统设置</string>
+    <string name="projxinfomanage">收支管理</string>
+    <string name="projxflagmanage">便签管理</string>
+    <string name="projxaddflag">新增便签</string>
+
+    <string name="action_users">用户</string>
+    <string name="action_settings">设置</string>
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+    <string name="title_activity_login">登录</string>
+
+    <!-- 左侧边栏页面 -->
+    <string name="title_top">首页</string>
+    <string name="title_add">增加数据</string>
+    <string name="title_statistics">统计界面</string>
+    <string name="title_settings">设置</string>
+    <string name="title_share">分享</string>
+    <string name="title_send">发送</string>
+    <string-array name="adddata">
+        <item>add</item>
+        <item>delete</item>
+    </string-array>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">注册</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_username">该邮箱已经被注册了！</string>
+    <string name="error_invalid_password">密码太短了！</string>
+    <string name="error_incorrect_password">密码出错啦！</string>
+    <string name="error_field_required">请填写</string>
+    <string name="permission_rationale">"需要获取联系人权限"</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+
+    <!-- NavigationView -->
+    <string name="open_navigation">打开 Navigation</string>
+    <string name="close_navigation">关闭 Navigation</string>
+    <string name="name">名字：</string>
+    <string name="country">国家：</string>
+    <string name="email">邮箱地址：</string>
+    <string name="comment">评论</string>
+    <string name="favorite">收藏夹</string>
+    <string name="account">账号</string>
+    <string name="smartphone">手机</string>
+    <string name="place">位置</string>
+    <string name="friend">好友</string>
+    <string name="setting">设置</string>
+    <string name="contact">联系作者</string>
+    <string name="view_one">第一视图</string>
+    <string name="about">关于</string>
+    <string name="logout">注销</string>
+    <string name="version">版本</string>
+    <string name="author">作者</string>
+    <string name="author_name">FoxGeeker</string>
+    <string name="author_email">fengyunkkx@qq.com</string>
+
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_main_bottom">MainActivityBottom</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
