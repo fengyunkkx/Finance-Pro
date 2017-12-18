@@ -19,20 +19,21 @@
         <!-- Ver03版本 -->
 
         <activity
-            android:name=".projx.ver03.NavigationMainActivity"
+            android:name=".projx.ver03.Navigation01_MainActivity.Navigation_MainActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".projx.ver03.NavigationAbout"
+            android:name=".projx.ver03.Navigation02_AddActivity.Navigation_AddActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <!-- Ver02版本 -->
-
-
-        <!-- 登录界面 -->
-
-        <!-- 主界面 -->
         <activity
-            android:name=".projx.ver02.MainActivity"
+            android:name=".projx.ver03.Navigation03_DataActivity.Navigation_DataActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".projx.ver03.Navigation04_SettingsActivity.Navigation_SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".projx.ver03.Navigation05_AboutActivity.Navigation_AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
 
         <!-- Ver01版本 -->
         <activity

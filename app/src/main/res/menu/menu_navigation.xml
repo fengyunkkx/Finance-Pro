@@ -2,16 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navItemOne"
-            android:icon="@drawable/navigation_item_one"
-            android:title="@string/view_one" />
+            android:id="@+id/navItemMain"
+            android:icon="@drawable/navigation_main"
+            android:title="@string/view_top" />
+        <item
+            android:id="@+id/navItemAdd"
+            android:icon="@drawable/navigation_add"
+            android:title="@string/view_add" />
+        <item
+            android:id="@+id/navItemData"
+            android:icon="@drawable/navigation_data"
+            android:title="@string/view_data" />
+        <item
+            android:id="@+id/navItemSettings"
+            android:icon="@drawable/navigation_settings"
+            android:title="@string/view_settings" />
         <item
             android:id="@+id/navItemAbout"
-            android:icon="@drawable/navigation_item_two"
-            android:title="@string/about"/>
+            android:icon="@drawable/navigation_about"
+            android:title="@string/view_about"/>
         <item
             android:id="@+id/navItemLogout"
-            android:icon="@drawable/navigation_item_logout"
-            android:title="@string/logout"/>
+            android:icon="@drawable/navigation_logout"
+            android:title="@string/view_logout"/>
     </group>
 </menu>

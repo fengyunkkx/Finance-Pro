@@ -15,6 +15,46 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import proj.android.zyl.finance_pro.R;
+import proj.android.zyl.finance_pro.projx.ver03.Navigation01_MainActivity.Navigation_MainActivity;
+import proj.android.zyl.finance_pro.projx.ver03.Navigation02_AddActivity.Navigation_AddActivity;
+import proj.android.zyl.finance_pro.projx.ver03.Navigation03_DataActivity.Navigation_DataActivity;
+import proj.android.zyl.finance_pro.projx.ver03.Navigation04_SettingsActivity.Navigation_SettingsActivity;
+import proj.android.zyl.finance_pro.projx.ver03.Navigation05_AboutActivity.Navigation_AboutActivity;
+
+// 模板作者教程：https://solinariwu.blogspot.com/2017/02/android-navigation-viewactivity.html
+// 原作者 GitHub 链接：https://github.com/SolinariWu/NavigationViewBaseActivity
+// 感谢原作者 SolinariWu
+
+/*
+
+Finance Pro 布局说明
+
+Navigation 布局切换器 Navigation_BaseActivity
+
+- 首页 Navigation_MainActivity
+- - 欢迎来到 Main_FragmentList_Welcome
+- - 说明文档 Main_FragmentList_Readme
+
+- 新增 Navigation_AddActivity
+- - 新增支出 Add_FragmentList_AddOut
+- - 新增收入 Add_FragmentList_AddIn
+- - 收支便签 Add_FragmentList_AddNote
+
+- 管理 Navigation_DataActivity
+- - 数据管理 Data_FragmentList_DataAdmin
+- - 收入管理 Data_FragmentList_DataIn
+- - 支出管理 Data_FragmentList_DataOut
+
+- 设置 Navigation_SettingsActivity
+- - 密码修改 Settings_FragmentList_Password
+- - 系统设置 Settings_FragmentList_Settings
+
+- 关于 Navigation_AboutActivity
+
+- 登出 Logout
+
+
+*/
 
 
 public class Navigation_BaseActivity extends AppCompatActivity {
@@ -31,7 +71,7 @@ public class Navigation_BaseActivity extends AppCompatActivity {
         NV = (NavigationView) DL.findViewById(R.id.Left_Navigation);
         getLayoutInflater().inflate(layoutResID, FL, true);
         super.setContentView(DL);
-        toolbar = (Toolbar) findViewById(R.id.ToolBar);
+        toolbar = (Toolbar) findViewById(R.id.NavigationToolBar);
         setUpNavigation();
     }
 
@@ -42,32 +82,53 @@ public class Navigation_BaseActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 if (!(menuItem == NV.getMenu().getItem(CurrentMenuItem))) {//判断是否点击当前画面的项目，作出判断
                     switch (menuItem.getItemId()) {
-                        case R.id.navItemOne:
-                            Intent intent = new Intent();
-                            intent.setClass(Navigation_BaseActivity.this, NavigationMainActivity.class);
-                            startActivity(intent);
+                        case R.id.navItemMain:
+                            Intent intent1 = new Intent();
+                            intent1.setClass(Navigation_BaseActivity.this, Navigation_MainActivity.class);
+                            startActivity(intent1);
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
+                        case R.id.navItemAdd:
+                            Intent intent2 = new Intent();
+                            intent2.setClass(Navigation_BaseActivity.this, Navigation_AddActivity.class);
+                            startActivity(intent2);
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
+                        case R.id.navItemData:
+                            Intent intent3 = new Intent();
+                            intent3.setClass(Navigation_BaseActivity.this, Navigation_DataActivity.class);
+                            startActivity(intent3);
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
+                        case R.id.navItemSettings:
+                            Intent intent4 = new Intent();
+                            intent4.setClass(Navigation_BaseActivity.this, Navigation_SettingsActivity.class);
+                            startActivity(intent4);
                             overridePendingTransition(0, 0);
                             finish();
                             break;
                         case R.id.navItemAbout:
-                            Intent intent2 = new Intent();
-                            intent2.setClass(Navigation_BaseActivity.this, NavigationAbout.class);
-                            startActivity(intent2);
+                            Intent intent5 = new Intent();
+                            intent5.setClass(Navigation_BaseActivity.this, Navigation_AboutActivity.class);
+                            startActivity(intent5);
                             overridePendingTransition(0, 0);
                             finish();
                             break;
                         case R.id.navItemLogout:
                             new AlertDialog.Builder(Navigation_BaseActivity.this)
-                                    .setTitle("Logout")
-                                    .setMessage("Are you sure you want to Logout?")
-                                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    .setTitle("注销")
+                                    .setMessage("你想退出登录吗？")
+                                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             finish();
                                         }
 
                                     })
-                                    .setNegativeButton("No", null)
+                                    .setNegativeButton("取消", null)
                                     .show();
                             break;
                     }

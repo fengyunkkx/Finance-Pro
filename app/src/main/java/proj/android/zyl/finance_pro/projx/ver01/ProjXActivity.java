@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import proj.android.zyl.finance_pro.R;
-import proj.android.zyl.finance_pro.projx.ver01.*;
 
 
 public class ProjXActivity extends Activity {

@@ -2,8 +2,7 @@ package proj.android.zyl.finance_pro.projx.ver01;
 
 import proj.android.zyl.finance_pro.R;
 import proj.android.zyl.finance_pro.dao.PwdDAO;
-import proj.android.zyl.finance_pro.projx.ver01.ProjXActivity;
-import proj.android.zyl.finance_pro.projx.ver03.NavigationMainActivity;
+import proj.android.zyl.finance_pro.projx.ver03.Navigation01_MainActivity.Navigation_MainActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -115,7 +114,7 @@ public class ProjXLogin extends Activity {						// 登录界面
 				}
 
 				else if (pwdDAO.find(userlogin.getText().toString()).getPassword().equals(pwdlogin.getText().toString())){
-					Intent intent = new Intent(ProjXLogin.this, NavigationMainActivity.class);			//跳转到MainActivity
+					Intent intent = new Intent(ProjXLogin.this, Navigation_MainActivity.class);			//跳转到MainActivity
 					Toast.makeText(ProjXLogin.this, "登陆成功！", Toast.LENGTH_SHORT).show();
 					startActivity(intent);
 					pwdlogin.setText("");
