@@ -29,11 +29,11 @@ public class Settings_FragmentList_Password extends Fragment {
 
 
 
-        now_txtPwd1 = (EditText) view.findViewById(R.id.now_txtPwd1);
-        now_txtPwd2 = (EditText) view.findViewById(R.id.now_txtPwd2);
-        btnSet = (Button) view.findViewById(R.id.btnSet);
-        btnsetCancel = (Button) view.findViewById(R.id.btnsetCancel);
-        btnClose = (Button) view.findViewById(R.id.btnClose);
+        now_txtPwd1 = view.findViewById(R.id.now_txtPwd1);
+        now_txtPwd2 = view.findViewById(R.id.now_txtPwd2);
+        btnSet = view.findViewById(R.id.btnSet);
+        btnsetCancel = view.findViewById(R.id.btnsetCancel);
+        btnClose = view.findViewById(R.id.btnClose);
 
 
         btnSet.setOnClickListener(new View.OnClickListener() {            //设置按钮

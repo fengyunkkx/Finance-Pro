@@ -24,9 +24,8 @@ public class OutaccountDAO {
 	 */
 	public void add(Tb_outaccount tb_outaccount) {
 		db = helper.getWritableDatabase();
-		db.execSQL(
-				"insert into tb_outaccount (_id,money,time,type,address,mark) values (?,?,?,?,?,?)",
-				new Object[] { tb_outaccount.getid(), tb_outaccount.getMoney(),
+		String sql ="insert into tb_outaccount (_id,money,time,type,address,mark) values (?,?,?,?,?,?)";
+		db.execSQL(sql,new Object[] { tb_outaccount.getid(), tb_outaccount.getMoney(),
 						tb_outaccount.getTime(), tb_outaccount.getType(),
 						tb_outaccount.getAddress(), tb_outaccount.getMark() });
 	}
@@ -38,9 +37,8 @@ public class OutaccountDAO {
 	 */
 	public void update(Tb_outaccount tb_outaccount) {
 		db = helper.getWritableDatabase();
-		db.execSQL(
-				"update tb_outaccount set money = ?,time = ?,type = ?,address = ?,mark = ? where _id = ?",
-				new Object[] { tb_outaccount.getMoney(),
+		String sql ="update tb_outaccount set money = ?,time = ?,type = ?,address = ?,mark = ? where _id = ?";
+		db.execSQL(sql,new Object[] { tb_outaccount.getMoney(),
 						tb_outaccount.getTime(), tb_outaccount.getType(),
 						tb_outaccount.getAddress(), tb_outaccount.getMark(),
 						tb_outaccount.getid() });
@@ -54,10 +52,9 @@ public class OutaccountDAO {
 	 */
 	public Tb_outaccount find(int id) {
 		db = helper.getWritableDatabase();
+		String sql ="select _id,money,time,type,address,mark from tb_outaccount where _id = ?";
 		Cursor cursor = db
-				.rawQuery(
-						"select _id,money,time,type,address,mark from tb_outaccount where _id = ?",
-						new String[] { String.valueOf(id) });
+				.rawQuery(sql,new String[] { String.valueOf(id) });
 		if (cursor.moveToNext())
 		{
 			return new Tb_outaccount(
@@ -87,7 +84,7 @@ public class OutaccountDAO {
 			sb.deleteCharAt(sb.length() - 1);
 			db = helper.getWritableDatabase();
 			db.execSQL("delete from tb_outaccount where _id in (" + sb + ")",
-					(Object[]) ids);
+                    ids);
 		}
 	}
 
@@ -103,7 +100,8 @@ public class OutaccountDAO {
 	public List<Tb_outaccount> getScrollData(int start, int count) {
 		List<Tb_outaccount> tb_outaccount = new ArrayList<Tb_outaccount>();
 		db = helper.getWritableDatabase();
-		Cursor cursor = db.rawQuery("select * from tb_outaccount limit ?,?",
+		String sql ="select * from tb_outaccount limit ?,?";
+		Cursor cursor = db.rawQuery(sql,
 				new String[] { String.valueOf(start), String.valueOf(count) });
 		while (cursor.moveToNext())
 		{

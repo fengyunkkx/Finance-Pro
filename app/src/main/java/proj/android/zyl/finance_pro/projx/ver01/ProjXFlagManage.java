@@ -22,9 +22,9 @@ public class ProjXFlagManage extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_flagmanage);
-		txtFlag = (EditText) findViewById(R.id.txtFlagManage);
-		btnEdit = (Button) findViewById(R.id.btnFlagManageEdit);
-		btnDel = (Button) findViewById(R.id.btnFlagManageDelete);
+		txtFlag = findViewById(R.id.txtFlagManage);
+		btnEdit = findViewById(R.id.btnFlagManageEdit);
+		btnDel = findViewById(R.id.btnFlagManageDelete);
 
 		Intent intent = getIntent();
 		Bundle bundle = intent.getExtras();

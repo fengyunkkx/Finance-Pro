@@ -29,11 +29,11 @@ public class ProjXOutaccountinfo extends Activity {		// 支出管理界面
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_outaccountinfo);
-		lvinfo = (ListView) findViewById(R.id.lvoutaccountinfo);
+		lvinfo = findViewById(R.id.lvoutaccountinfo);
 
 		ShowInfo(R.id.btnoutinfo);
 
-		btnClose = (Button) findViewById(R.id.btnClose);
+		btnClose = findViewById(R.id.btnClose);
 
 		lvinfo.setOnItemClickListener(new OnItemClickListener()
 		{

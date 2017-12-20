@@ -24,21 +24,23 @@ public class FlagDAO {
 	 */
 	public void add(Tb_flag tb_flag) {
 		db = helper.getWritableDatabase();
-		db.execSQL("insert into tb_flag (_id,flag) values (?,?)", new Object[] {
+        String sql ="insert into tb_flag (_id,flag) values (?,?)";
+		db.execSQL(sql, new Object[] {
 				tb_flag.getid(), tb_flag.getFlag() });
 	}
 
-	/**
-	 * 更新便签信息
-	 *
-	 * @param tb_flag
-	 */
 	public void update(Tb_flag tb_flag) {
 		db = helper.getWritableDatabase();
-		db.execSQL("update tb_flag set flag = ? where _id = ?", new Object[] {
+        String sql ="update tb_flag set flag = ? where _id = ?";
+		db.execSQL(sql, new Object[] {
 				tb_flag.getFlag(), tb_flag.getid() });
 	}
 
+    /**
+     * 更新便签信息
+     *
+     * @param tb_flag
+     */
 	/**
 	 * 查找便签信息
 	 *
@@ -47,9 +49,8 @@ public class FlagDAO {
 	 */
 	public Tb_flag find(int id) {
 		db = helper.getWritableDatabase();
-		Cursor cursor = db.rawQuery(
-				"select _id,flag from tb_flag where _id = ?",
-				new String[] { String.valueOf(id) });
+		String sql ="select _id,flag from tb_flag where _id = ?";
+		Cursor cursor = db.rawQuery(sql ,new String[] { String.valueOf(id) });
 		if (cursor.moveToNext())
 		{
 			return new Tb_flag(cursor.getInt(cursor.getColumnIndex("_id")),
@@ -74,7 +75,7 @@ public class FlagDAO {
 			sb.deleteCharAt(sb.length() - 1);
 			db = helper.getWritableDatabase();
 			db.execSQL("delete from tb_flag where _id in (" + sb + ")",
-					(Object[]) ids);
+                    ids);
 		}
 	}
 
@@ -90,7 +91,8 @@ public class FlagDAO {
 	public List<Tb_flag> getScrollData(int start, int count) {
 		List<Tb_flag> lisTb_flags = new ArrayList<Tb_flag>();
 		db = helper.getWritableDatabase();
-		Cursor cursor = db.rawQuery("select * from tb_flag limit ?,?",
+        String sql ="select * from tb_flag limit ?,?";
+		Cursor cursor = db.rawQuery(sql,
 				new String[] { String.valueOf(start), String.valueOf(count) });
 		while (cursor.moveToNext())
 		{

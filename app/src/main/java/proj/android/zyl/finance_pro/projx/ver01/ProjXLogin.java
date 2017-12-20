@@ -21,12 +21,12 @@ public class ProjXLogin extends Activity {						// 登录界面
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_login);
 
-		pwdlogin = (EditText) findViewById(R.id.pwdLogin);		// 密码输入框
-        userlogin = (EditText) findViewById(R.id.userLogin); 		// 用户名输入框
-		btnregister = (Button) findViewById(R.id.btnRegister); 	// 注册按钮
-		btnlogin1 = (Button) findViewById(R.id.btnLogin1); 		// 登陆1.0按钮
-		btnlogin2 = (Button) findViewById(R.id.btnLogin2); 		// 登陆2.0按钮
-		btnclose = (Button) findViewById(R.id.btnClose); 			// 取消按钮
+		pwdlogin = findViewById(R.id.pwdLogin);		// 密码输入框
+        userlogin = findViewById(R.id.userLogin); 		// 用户名输入框
+		btnregister = findViewById(R.id.btnRegister); 	// 注册按钮
+		btnlogin1 = findViewById(R.id.btnLogin1); 		// 登陆1.0按钮
+		btnlogin2 = findViewById(R.id.btnLogin2); 		// 登陆2.0按钮
+		btnclose = findViewById(R.id.btnClose); 			// 取消按钮
 
 		btnregister.setOnClickListener(new OnClickListener() {
 			Intent intent = null;

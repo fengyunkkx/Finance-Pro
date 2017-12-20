@@ -24,9 +24,8 @@ public class InaccountDAO {
 	 */
 	public void add(Tb_inaccount tb_inaccount) {
 		db = helper.getWritableDatabase();
-		db.execSQL(
-				"insert into tb_inaccount (_id,money,time,type,handler,mark) values (?,?,?,?,?,?)",
-				new Object[] { tb_inaccount.getid(), tb_inaccount.getMoney(),
+		String sql ="insert into tb_inaccount (_id,money,time,type,handler,mark) values (?,?,?,?,?,?)";
+		db.execSQL(sql,new Object[] { tb_inaccount.getid(), tb_inaccount.getMoney(),
 						tb_inaccount.getTime(), tb_inaccount.getType(),
 						tb_inaccount.getHandler(), tb_inaccount.getMark() });
 	}
@@ -38,9 +37,8 @@ public class InaccountDAO {
 	 */
 	public void update(Tb_inaccount tb_inaccount) {
 		db = helper.getWritableDatabase();
-		db.execSQL(
-				"update tb_inaccount set money = ?,time = ?,type = ?,handler = ?,mark = ? where _id = ?",
-				new Object[] { tb_inaccount.getMoney(), tb_inaccount.getTime(),
+		String sql ="update tb_inaccount set money = ?,time = ?,type = ?,handler = ?,mark = ? where _id = ?";
+		db.execSQL(sql,new Object[] { tb_inaccount.getMoney(), tb_inaccount.getTime(),
 						tb_inaccount.getType(), tb_inaccount.getHandler(),
 						tb_inaccount.getMark(), tb_inaccount.getid() });
 	}
@@ -51,12 +49,12 @@ public class InaccountDAO {
 	 * @param id
 	 * @return
 	 */
+
+
 	public Tb_inaccount find(int id) {
 		db = helper.getWritableDatabase();
-		Cursor cursor = db
-				.rawQuery(
-						"select _id,money,time,type,handler,mark from tb_inaccount where _id = ?",
-						new String[] { String.valueOf(id) });
+		String sql ="select _id,money,time,type,handler,mark from tb_inaccount where _id = ?";
+		Cursor cursor = db.rawQuery(sql,new String[] { String.valueOf(id) });
 		if (cursor.moveToNext())
 		{
 			return new Tb_inaccount(
@@ -86,7 +84,7 @@ public class InaccountDAO {
 			sb.deleteCharAt(sb.length() - 1);
 			db = helper.getWritableDatabase();
 			db.execSQL("delete from tb_inaccount where _id in (" + sb + ")",
-					(Object[]) ids);
+                    ids);
 		}
 	}
 
@@ -102,7 +100,8 @@ public class InaccountDAO {
 	public List<Tb_inaccount> getScrollData(int start, int count) {
 		List<Tb_inaccount> tb_inaccount = new ArrayList<Tb_inaccount>();
 		db = helper.getWritableDatabase();
-		Cursor cursor = db.rawQuery("select * from tb_inaccount limit ?,?",
+		String sql ="select * from tb_inaccount limit ?,?";
+		Cursor cursor = db.rawQuery(sql,
 				new String[] { String.valueOf(start), String.valueOf(count) });
 		while (cursor.moveToNext())
 		{

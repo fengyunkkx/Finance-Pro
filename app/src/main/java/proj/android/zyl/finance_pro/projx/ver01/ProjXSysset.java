@@ -20,11 +20,11 @@ public class ProjXSysset extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_sysset);
 
-		now_txtPwd1 = (EditText) findViewById(R.id.now_txtPwd1);
-		now_txtPwd2 = (EditText) findViewById(R.id.now_txtPwd2);
-		btnSet = (Button) findViewById(R.id.btnSet);
-		btnsetCancel = (Button) findViewById(R.id.btnsetCancel);
-		btnClose = (Button) findViewById(R.id.btnClose);
+		now_txtPwd1 = findViewById(R.id.now_txtPwd1);
+		now_txtPwd2 = findViewById(R.id.now_txtPwd2);
+		btnSet = findViewById(R.id.btnSet);
+		btnsetCancel = findViewById(R.id.btnsetCancel);
+		btnClose = findViewById(R.id.btnClose);
 
 
 		btnSet.setOnClickListener(new OnClickListener() {			//设置按钮

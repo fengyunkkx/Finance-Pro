@@ -24,11 +24,11 @@ public class ProjXRegister extends Activity { // 注册界面
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_register);
 
-		userregister = (EditText) findViewById(R.id.userRegister);
-		pwdregister1 = (EditText) findViewById(R.id.pwdRegister1);
-		pwdregister2 = (EditText) findViewById(R.id.pwdRegister2);
-		btnregister = (Button) findViewById(R.id.btnRegister);
-		btnclose = (Button) findViewById(R.id.btnClose);
+		userregister = findViewById(R.id.userRegister);
+		pwdregister1 = findViewById(R.id.pwdRegister1);
+		pwdregister2 = findViewById(R.id.pwdRegister2);
+		btnregister = findViewById(R.id.btnRegister);
+		btnclose = findViewById(R.id.btnClose);
 
 
 		btnregister.setOnClickListener(new OnClickListener() {

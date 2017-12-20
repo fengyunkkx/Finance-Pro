@@ -31,7 +31,7 @@ public class Data_FragmentList_DataIn extends Fragment {
 
 
         super.onCreate(savedInstanceState);
-        lvinfo = (ListView) view.findViewById(R.id.lvinaccountinfo);
+        lvinfo = view.findViewById(R.id.lvinaccountinfo);
 
 
         lvinfo.setOnItemClickListener(new AdapterView.OnItemClickListener()

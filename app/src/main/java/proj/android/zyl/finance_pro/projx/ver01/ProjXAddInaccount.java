@@ -30,13 +30,13 @@ public class ProjXAddInaccount extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {			// 新增收入页面
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_addinaccount);
-		txtInMoney = (EditText) findViewById(R.id.txtInMoney);
-		txtInTime = (EditText) findViewById(R.id.txtInTime);
-		txtInHandler = (EditText) findViewById(R.id.txtInHandler);
-		txtInMark = (EditText) findViewById(R.id.txtInMark);
-		spInType = (Spinner) findViewById(R.id.spInType);
-		btnInSaveButton = (Button) findViewById(R.id.btnInSave);
-		btnInCancelButton = (Button) findViewById(R.id.btnInCancel);
+		txtInMoney = findViewById(R.id.txtInMoney);
+		txtInTime = findViewById(R.id.txtInTime);
+		txtInHandler = findViewById(R.id.txtInHandler);
+		txtInMark = findViewById(R.id.txtInMark);
+		spInType = findViewById(R.id.spInType);
+		btnInSaveButton = findViewById(R.id.btnInSave);
+		btnInCancelButton = findViewById(R.id.btnInCancel);
 
 		txtInTime.setOnClickListener(new OnClickListener() {
 

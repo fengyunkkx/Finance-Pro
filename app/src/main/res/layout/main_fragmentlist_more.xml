@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+
+
     <TextView
-        android:text="@string/email"
+        android:text="@string/main_readme01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="5"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="30dp"
         android:textColor="@color/black"
         />
-
-    <EditText
+    <TextView
+        android:text="@string/building"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_weight="1"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/edtEmail"
-        style="@style/Widget.AppCompat.EditText" />
+        android:textColor="@color/darkgray"
+        />
+
+
+
 </LinearLayout>

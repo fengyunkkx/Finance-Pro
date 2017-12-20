@@ -37,7 +37,7 @@ public class ProjXActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_main);
 			
-			gvInfo = (GridView) findViewById(R.id.gvInfo);
+			gvInfo = findViewById(R.id.gvInfo);
 			pictureAdapter adapter = new pictureAdapter(titles, images, this);
 			gvInfo.setAdapter(adapter);
 			gvInfo.setOnItemClickListener(new OnItemClickListener() {
@@ -159,8 +159,8 @@ class pictureAdapter extends BaseAdapter
 		{
 			arg1 = inflater.inflate(R.layout.ver01_gvitem, null);
 			viewHolder = new ViewHolder();
-			viewHolder.title = (TextView) arg1.findViewById(R.id.ItemTitle);
-			viewHolder.image = (ImageView) arg1.findViewById(R.id.ItemImage);
+			viewHolder.title = arg1.findViewById(R.id.ItemTitle);
+			viewHolder.image = arg1.findViewById(R.id.ItemImage);
 			arg1.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) arg1.getTag();

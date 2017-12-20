@@ -42,7 +42,7 @@ public class Main_FragmentList_Welcome extends Fragment {
 
         super.onCreate(savedInstanceState);
 
-        gvInfo = (GridView) view.findViewById(R.id.gvInfo2);
+        gvInfo = view.findViewById(R.id.gvInfo2);
         pictureAdapter2 adapter = new pictureAdapter2(titles, images, getActivity());
         gvInfo.setAdapter(adapter);
         gvInfo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -165,8 +165,8 @@ public class Main_FragmentList_Welcome extends Fragment {
             if (arg1 == null) {
                 arg1 = inflater.inflate(R.layout.main_gvitem, null);
                 viewHolder = new ViewHolder();
-                viewHolder.title = (TextView) arg1.findViewById(R.id.ItemTitle);
-                viewHolder.image = (ImageView) arg1.findViewById(R.id.ItemImage);
+                viewHolder.title = arg1.findViewById(R.id.ItemTitle);
+                viewHolder.image = arg1.findViewById(R.id.ItemImage);
                 arg1.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) arg1.getTag();

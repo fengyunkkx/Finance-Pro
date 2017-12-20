@@ -49,9 +49,10 @@
 
 
     <!-- NavigationView 首页 -->
-    <string name="nv_main_welcome">欢迎使用</string>
+    <string name="nv_main_welcome">功能一览</string>
     <string name="nv_main_readme">使用说明</string>
     <string name="nv_main_more">更多</string>
+    <string name="building">本页面正在建设中… 看看其他页面吧！</string>
 
     <!-- NavigationView 新增数据 -->
     <string name="nv_add_out">新增支出</string>
@@ -66,7 +67,7 @@
     <!-- NavigationView 设置 -->
     <string name="nv_settings_settings">系统设置</string>
     <string name="nv_settings_password">密码修改</string>
-    <string name="nv_settings_more">更多</string>
+    <string name="nv_settings_more">高级设置</string>
 
     <!-- NavigationView 关于 -->
     <string name="version">版本</string>
@@ -74,6 +75,12 @@
     <string name="author_name">FoxGeeker</string>
     <string name="author_email">fengyunkkx@qq.com</string>
 
+    <!-- NavigationView Readme -->
+    <string name="main_readme01">欢迎使用家庭理财系统</string>
+    <string name="main_readme02">↑ 你可以在上方的选择栏中，选择你要做的操作</string>
+    <string name="main_readme03">← 你可以划开左侧的侧边栏，选择你要做的操作类型</string>
+    <string name="main_readme04">↓ 通过返回键退出登录</string>
+    <string name="main_readme05">本版本为 Demo 版，祝您使用愉快</string>
 
 
 </resources>

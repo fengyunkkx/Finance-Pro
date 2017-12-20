@@ -36,11 +36,11 @@ public class Data_FragmentList_DataOut extends Fragment {
 
 
         super.onCreate(savedInstanceState);
-        lvinfo = (ListView) view.findViewById(R.id.lvoutaccountinfo);
+        lvinfo = view.findViewById(R.id.lvoutaccountinfo);
 
         ShowInfo(R.id.btnoutinfo);
 
-        btnClose = (Button) view.findViewById(R.id.btnClose);
+        btnClose = view.findViewById(R.id.btnClose);
 
         lvinfo.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {

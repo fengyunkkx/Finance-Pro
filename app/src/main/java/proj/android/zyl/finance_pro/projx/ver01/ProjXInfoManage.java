@@ -43,15 +43,15 @@ public class ProjXInfoManage extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_infomanage);
-		tvtitle = (TextView) findViewById(R.id.inouttitle);
-		textView = (TextView) findViewById(R.id.tvInOut);
-		txtMoney = (EditText) findViewById(R.id.txtInOutMoney);
-		txtTime = (EditText) findViewById(R.id.txtInOutTime);
-		spType = (Spinner) findViewById(R.id.spInOutType);
-		txtHA = (EditText) findViewById(R.id.txtInOut);
-		txtMark = (EditText) findViewById(R.id.txtInOutMark);
-		btnEdit = (Button) findViewById(R.id.btnInOutEdit);
-		btnDel = (Button) findViewById(R.id.btnInOutDelete);
+		tvtitle = findViewById(R.id.inouttitle);
+		textView = findViewById(R.id.tvInOut);
+		txtMoney = findViewById(R.id.txtInOutMoney);
+		txtTime = findViewById(R.id.txtInOutTime);
+		spType = findViewById(R.id.spInOutType);
+		txtHA = findViewById(R.id.txtInOut);
+		txtMark = findViewById(R.id.txtInOutMark);
+		btnEdit = findViewById(R.id.btnInOutEdit);
+		btnDel = findViewById(R.id.btnInOutDelete);
 
 		Intent intent = getIntent();
 		Bundle bundle = intent.getExtras();

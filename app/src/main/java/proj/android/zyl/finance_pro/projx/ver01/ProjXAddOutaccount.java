@@ -31,13 +31,13 @@ public class ProjXAddOutaccount extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_addoutaccount);
-		txtMoney = (EditText) findViewById(R.id.txtMoney);
-		txtTime = (EditText) findViewById(R.id.txtTime);
-		txtAddress = (EditText) findViewById(R.id.txtAddress);
-		txtMark = (EditText) findViewById(R.id.txtMark);
-		spType = (Spinner) findViewById(R.id.spType);
-		btnSaveButton = (Button) findViewById(R.id.btnSave);
-		btnCancelButton = (Button) findViewById(R.id.btnCancel);
+		txtMoney = findViewById(R.id.txtMoney);
+		txtTime = findViewById(R.id.txtTime);
+		txtAddress = findViewById(R.id.txtAddress);
+		txtMark = findViewById(R.id.txtMark);
+		spType = findViewById(R.id.spType);
+		btnSaveButton = findViewById(R.id.btnSave);
+		btnCancelButton = findViewById(R.id.btnCancel);
 
 		txtTime.setOnClickListener(new OnClickListener() {
 

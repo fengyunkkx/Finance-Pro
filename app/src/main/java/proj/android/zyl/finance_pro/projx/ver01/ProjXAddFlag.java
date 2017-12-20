@@ -23,9 +23,9 @@ public class ProjXAddFlag extends Activity{
 		setContentView(R.layout.ver01_accountflag);
 
 
-		txt_flag = (EditText)findViewById(R.id.txtFlag);
-		btn_save = (Button)findViewById(R.id.btnflagSave);
-		btn_exit = (Button)findViewById(R.id.btnflagCancel);
+		txt_flag = findViewById(R.id.txtFlag);
+		btn_save = findViewById(R.id.btnflagSave);
+		btn_exit = findViewById(R.id.btnflagCancel);
 
 		btn_save.setOnClickListener(new OnClickListener() {		
 			public void onClick(View v) {

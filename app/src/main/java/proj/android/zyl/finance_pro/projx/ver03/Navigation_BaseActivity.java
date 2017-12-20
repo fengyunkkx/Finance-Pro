@@ -10,9 +10,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import proj.android.zyl.finance_pro.R;
 import proj.android.zyl.finance_pro.projx.ver03.Navigation01_MainActivity.Navigation_MainActivity;
@@ -64,11 +67,13 @@ public class Navigation_BaseActivity extends AppCompatActivity {
     protected Toolbar toolbar;
     protected int CurrentMenuItem = 0;//记录用户正在哪一个页面
 
+    private long mExitTime;
+
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
         DL = (DrawerLayout) getLayoutInflater().inflate(R.layout.navigation_drawer, null);
-        FL = (FrameLayout) DL.findViewById(R.id.content_frame);
-        NV = (NavigationView) DL.findViewById(R.id.Left_Navigation);
+        FL = DL.findViewById(R.id.content_frame);
+        NV = DL.findViewById(R.id.Left_Navigation);
         getLayoutInflater().inflate(layoutResID, FL, true);
         super.setContentView(DL);
         toolbar = (Toolbar) findViewById(R.id.NavigationToolBar);
@@ -163,4 +168,27 @@ public class Navigation_BaseActivity extends AppCompatActivity {
         DL.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
+
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+
+            exit();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void exit() {
+        if ((System.currentTimeMillis() - mExitTime) > 2000) {
+            Toast.makeText(Navigation_BaseActivity.this, "再按一次退出登陆", Toast.LENGTH_SHORT).show();
+            mExitTime = System.currentTimeMillis();
+        } else {
+            //MyConfig.clearSharePre(this, "users");
+            finish();
+            System.exit(0);
+        }
+    }
 }
+

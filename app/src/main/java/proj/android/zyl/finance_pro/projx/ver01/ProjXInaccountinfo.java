@@ -28,10 +28,10 @@ public class ProjXInaccountinfo extends Activity {		// 收入信息界面
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_inaccountinfo);
-		lvinfo = (ListView) findViewById(R.id.lvinaccountinfo);
+		lvinfo = findViewById(R.id.lvinaccountinfo);
 		ShowInfo(R.id.btnininfo);
 
-		btnClose = (Button) findViewById(R.id.btnClose);
+		btnClose = findViewById(R.id.btnClose);
 
 		lvinfo.setOnItemClickListener(new OnItemClickListener()
 		{

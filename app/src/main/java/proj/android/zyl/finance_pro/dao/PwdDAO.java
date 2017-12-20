@@ -23,8 +23,9 @@ public class PwdDAO {
 
 	public void add(Tb_pwd tb_pwd) {
 		db = helper.getWritableDatabase();
+		String sql ="insert into tb_pwd (username,password) values (?,?)";
 		try{
-			db.execSQL("insert into tb_pwd (username,password) values (?,?)",
+			db.execSQL(sql,
 					new Object[] { tb_pwd.getUsername(), tb_pwd.getPassword() });
 		}catch(SQLException e){
 
@@ -39,8 +40,8 @@ public class PwdDAO {
 	 */
 	public void update(Tb_pwd tb_pwd) {
 		db = helper.getWritableDatabase();
-		db.execSQL("update tb_pwd set password = ?",
-				new Object[] { tb_pwd.getPassword() });
+		String sql ="update tb_pwd set password = ?";
+		db.execSQL(sql,new Object[] { tb_pwd.getPassword() });
 	}
 
 	/**

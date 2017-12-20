@@ -31,11 +31,11 @@ public class ProjXShowinfo extends Activity {					// 数据管理界面
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ver01_showinfo);
 
-		btnClose = (Button) findViewById(R.id.btnClose);
-		lvinfo = (ListView) findViewById(R.id.lvinfo);
-		btnoutinfo = (Button) findViewById(R.id.btnoutinfo);
-		btnininfo = (Button) findViewById(R.id.btnininfo);
-		btnflaginfo = (Button) findViewById(R.id.btnflaginfo);
+		btnClose = findViewById(R.id.btnClose);
+		lvinfo = findViewById(R.id.lvinfo);
+		btnoutinfo = findViewById(R.id.btnoutinfo);
+		btnininfo = findViewById(R.id.btnininfo);
+		btnflaginfo = findViewById(R.id.btnflaginfo);
 
 		ShowInfo(R.id.btnoutinfo);
 
@@ -142,6 +142,8 @@ public class ProjXShowinfo extends Activity {					// 数据管理界面
 				android.R.layout.simple_list_item_1, strInfos);
 		lvinfo.setAdapter(arrayAdapter);
 	}
+
+
 
 	protected void onRestart() {
 		super.onRestart();
