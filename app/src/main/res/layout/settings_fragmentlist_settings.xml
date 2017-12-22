@@ -17,7 +17,7 @@
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/img01" />
+            android:src="@drawable/img06" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,17 +29,41 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-
-
     <TextView
-        android:text="@string/building"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_weight="1"
-        android:textColor="@color/darkgray"
-        />
+        android:text="数据管理" />
 
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_delete" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" " />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="备份与恢复" />
+
+    <Button
+        android:id="@+id/btnBackup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_backup" />
+
+    <Button
+        android:id="@+id/btnRecovery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_recovery" />
 
 
 </LinearLayout>

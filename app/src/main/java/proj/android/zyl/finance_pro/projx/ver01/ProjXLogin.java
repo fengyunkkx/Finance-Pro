@@ -89,7 +89,7 @@ public class ProjXLogin extends Activity {						// 登录界面
                 }
 
                 else if (pwdDAO.find(userlogin.getText().toString()).getPassword().equals(pwdlogin.getText().toString())){
-                    Intent intent = new Intent(ProjXLogin.this, ProjXActivity.class);			//跳转到ProjXActivity
+                    Intent intent = new Intent(ProjXLogin.this, Navigation_MainActivity.class);			//跳转到ProjXActivity
                     Toast.makeText(ProjXLogin.this, "登陆成功！", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                     pwdlogin.setText("");
@@ -114,7 +114,7 @@ public class ProjXLogin extends Activity {						// 登录界面
 				}
 
 				else if (pwdDAO.find(userlogin.getText().toString()).getPassword().equals(pwdlogin.getText().toString())){
-					Intent intent = new Intent(ProjXLogin.this, Navigation_MainActivity.class);			//跳转到MainActivity
+					Intent intent = new Intent(ProjXLogin.this, ProjXActivity.class);			//跳转到MainActivity
 					Toast.makeText(ProjXLogin.this, "登陆成功！", Toast.LENGTH_SHORT).show();
 					startActivity(intent);
 					pwdlogin.setText("");

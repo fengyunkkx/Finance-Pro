@@ -22,8 +22,8 @@
         android:dividerHeight="0dp"
         android:background="@color/white"
         app:menu="@menu/menu_navigation"
-        app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:headerLayout="@layout/navigation_drawer_header"
         />
+    <!--app:itemIconTint="@color/black"-->
 </android.support.v4.widget.DrawerLayout>

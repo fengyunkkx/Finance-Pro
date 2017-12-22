@@ -16,7 +16,7 @@ public class Navigation_MainActivity extends Navigation_BaseActivity {
     private ViewPager myViewPager;
     private TabLayout tabLayout;
     private int[] IconResID = {R.drawable.selector_one,R.drawable.selector_two,R.drawable.selector_three};
-    private int[] TollBarTitle = {R.string.nv_main_welcome,R.string.nv_main_readme,R.string.nv_main_more};
+    private int[] TollBarTitle = {R.string.nv_main_readme,R.string.nv_main_welcome,R.string.nv_main_more};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -64,8 +64,8 @@ public class Navigation_MainActivity extends Navigation_BaseActivity {
 
     }
     private void setViewPager(){
-        Main_FragmentList_Welcome myFragment1 = new Main_FragmentList_Welcome();
-        Main_FragmentList_Readme myFragment2 = new Main_FragmentList_Readme();
+        Main_FragmentList_Readme myFragment1 = new Main_FragmentList_Readme();
+        Main_FragmentList_Welcome myFragment2 = new Main_FragmentList_Welcome();
         Main_FragmentList_More myFragment3 = new Main_FragmentList_More();
         List<Fragment> fragmentList = new ArrayList<Fragment>();
         fragmentList.add(myFragment1);

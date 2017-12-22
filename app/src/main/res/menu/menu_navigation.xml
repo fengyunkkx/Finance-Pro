@@ -3,27 +3,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/navItemMain"
-            android:icon="@drawable/navigation_main"
+            android:icon="@drawable/navigation_server"
             android:title="@string/view_top" />
         <item
             android:id="@+id/navItemAdd"
-            android:icon="@drawable/navigation_add"
+            android:icon="@drawable/navigation_money"
             android:title="@string/view_add" />
         <item
             android:id="@+id/navItemData"
-            android:icon="@drawable/navigation_data"
+            android:icon="@drawable/navigation_datas"
             android:title="@string/view_data" />
         <item
             android:id="@+id/navItemSettings"
-            android:icon="@drawable/navigation_settings"
+            android:icon="@drawable/navigation_setting"
             android:title="@string/view_settings" />
         <item
             android:id="@+id/navItemAbout"
-            android:icon="@drawable/navigation_about"
+            android:icon="@drawable/navigation_user"
             android:title="@string/view_about"/>
         <item
             android:id="@+id/navItemLogout"
-            android:icon="@drawable/navigation_logout"
+            android:icon="@drawable/navigation_transfer"
             android:title="@string/view_logout"/>
+
+        <!--图标链接：https://www.flaticon.com/free-icon/user_179615-->
     </group>
 </menu>

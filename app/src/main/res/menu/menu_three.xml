@@ -7,11 +7,12 @@
         android:icon="@drawable/toolbar_place"
         android:orderInCategory="20"
         android:id="@+id/ItemPlace"/>
+    <!--android:icon="@drawable/toolbar_account"-->
     <item
         android:title="@string/smartphone"
         app:showAsAction="always"
         android:icon="@drawable/toolbar_smartphone"
         android:orderInCategory="30"
         android:id="@+id/ItemSmartphone"/>
-
+    <!--android:icon="@drawable/toolbar_account"-->
 </menu>

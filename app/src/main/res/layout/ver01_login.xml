@@ -131,14 +131,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
-                    android:text="注册" />
+                    android:text="注 册" />
 
                 <Button
                     android:id="@+id/btnLogin1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
-                    android:text="登录至1.0版" />
+                    android:text="登 陆" />
 
 
             </LinearLayout>
@@ -152,19 +152,26 @@
         android:layout_height="match_parent"
         android:gravity="bottom|center" >
 
-        <Button
-            android:id="@+id/btnClose"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="退出" />
+            android:orientation="vertical"
+            android:gravity="bottom|center" >
 
         <Button
             android:id="@+id/btnLogin2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="体验新版" />
+            android:text="登陆到旧版本" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出家庭理财系统" />
+
+        </LinearLayout>
 <!--
         <Button
             android:id="@+id/btnAuto"

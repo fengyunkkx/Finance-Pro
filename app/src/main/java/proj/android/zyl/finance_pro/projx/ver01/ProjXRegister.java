@@ -54,14 +54,14 @@ public class ProjXRegister extends Activity { // 注册界面
 					Tb_pwd tb_pwd = new Tb_pwd(userregister.getText().toString(), pwdregister1.getText().toString());
 					pwdDAO.add(tb_pwd);
 
+					Toast.makeText(ProjXRegister.this, "注册成功，请重新登录",
+							Toast.LENGTH_SHORT).show();
+					intent = new Intent(ProjXRegister.this, ProjXLogin.class);
 					finish();
 				}
 
 
-				Toast.makeText(ProjXRegister.this, "注册成功，请重新登录",
-						Toast.LENGTH_SHORT).show();
-				intent = new Intent(ProjXRegister.this, ProjXLogin.class);
-				startActivity(intent);
+
 			}
 		});
 
@@ -75,13 +75,7 @@ public class ProjXRegister extends Activity { // 注册界面
 			}
 		});
 		/*
-
-
 			public void onClick(View login) {
-
-
-
-
 
 				PwdDAO pwdDAO = new PwdDAO(ProjXRegister.this);
 				Tb_pwd tb_pwd = new Tb_pwd(userregister.getText().toString(), pwdregister.getText().toString());
@@ -89,9 +83,6 @@ public class ProjXRegister extends Activity { // 注册界面
 				// 判断用户名和密码是否正确
 
 				pwdDAO.add(tb_pwd);
-
-
-
 
 			}
 
