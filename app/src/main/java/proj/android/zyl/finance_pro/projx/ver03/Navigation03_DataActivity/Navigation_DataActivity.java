@@ -21,7 +21,7 @@ import proj.android.zyl.finance_pro.projx.ver03.ViewPagerFragmentAdapter;
 public class Navigation_DataActivity extends Navigation_BaseActivity {
     private ViewPager myViewPager;
     private TabLayout tabLayout;
-    private int[] IconResID = {R.drawable.selector_one,R.drawable.selector_two,R.drawable.selector_three};
+    private int[] IconResID = {R.drawable.selector_03_1,R.drawable.selector_03_2,R.drawable.selector_03_3};
     private int[] TollBarTitle = {R.string.nv_data_admin,R.string.nv_data_in,R.string.nv_data_out};
 
 

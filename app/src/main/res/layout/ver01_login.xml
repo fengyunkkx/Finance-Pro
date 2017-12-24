@@ -4,14 +4,14 @@
     android:layout_height="fill_parent"
     android:background="@drawable/wallpaper"
     android:orientation="vertical"
-    android:padding="5dp" >
+    android:padding="5dp">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView1"
@@ -35,20 +35,20 @@
     <FrameLayout
         android:id="@+id/frameLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -60,30 +60,30 @@
                     android:id="@+id/linearLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/linearLayout5"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:id="@+id/tvLoginname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textColor="#EEEEEE"
                             android:text="用户名："
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#EEEEEE" />
 
                         <EditText
                             android:id="@+id/userLogin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textColorHint="#AAAAAA"
+                            android:hint="请输入用户名"
                             android:textColor="#EEEEEE"
-                            android:hint="请输入用户名" >
+                            android:textColorHint="#AAAAAA">
 
                             <requestFocus />
                         </EditText>
@@ -92,26 +92,26 @@
                     <LinearLayout
                         android:id="@+id/linearLayout6"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:id="@+id/TVLogin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textColor="#EEEEEE"
                             android:text="密　码："
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#EEEEEE" />
 
                         <EditText
                             android:id="@+id/pwdLogin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textColorHint="#AAAAAA"
-                            android:textColor="#EEEEEE"
                             android:hint="请输入密码"
-                            android:inputType="textPassword" >
+                            android:inputType="textPassword"
+                            android:textColor="#EEEEEE"
+                            android:textColorHint="#AAAAAA">
 
 
                         </EditText>
@@ -123,7 +123,7 @@
                 android:id="@+id/linearLayout7"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/btnRegister"
@@ -150,36 +150,44 @@
         android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="bottom|center" >
+        android:gravity="bottom|center">
 
         <LinearLayout
             android:id="@+id/linearLayout10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="bottom|center" >
+            android:gravity="bottom|center"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnLogin2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="登陆到旧版本" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design by 张严林"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/darkgray"
+                android:textSize="15dp" />
 
-        <Button
-            android:id="@+id/btnClose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="退出家庭理财系统" />
+            <Button
+                android:id="@+id/btnLogin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="登陆到旧版本" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="退出家庭理财系统" />
 
         </LinearLayout>
-<!--
-        <Button
-            android:id="@+id/btnAuto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="自动填写" />
--->
+        <!--
+                <Button
+                    android:id="@+id/btnAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="自动填写" />
+        -->
 
     </LinearLayout>
 

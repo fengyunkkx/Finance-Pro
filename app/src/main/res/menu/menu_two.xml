@@ -4,7 +4,7 @@
 
     <item
         android:title="@string/favorite"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/toolbar_favorite"
         android:orderInCategory="20"
         android:id="@+id/ItemFavorite"/>

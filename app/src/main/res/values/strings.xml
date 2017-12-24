@@ -77,7 +77,7 @@
     <!-- NavigationView 关于 -->
     <string name="version">版本</string>
     <string name="author">作者</string>
-    <string name="author_name">FoxGeeker</string>
+    <string name="author_name">张严林</string>
     <string name="author_email">fengyunkkx@qq.com</string>
 
     <!-- NavigationView Readme -->
